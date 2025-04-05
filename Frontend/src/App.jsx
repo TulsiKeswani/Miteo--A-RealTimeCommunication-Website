@@ -10,7 +10,7 @@ import History from "./pages/History/history";
 import "./App.css";
 
 import axios from "axios";
-import server from "../environment.js";
+import server from "./environment.js";
 
 function App() {
   
