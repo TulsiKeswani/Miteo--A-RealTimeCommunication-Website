@@ -36,7 +36,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-  origin: "https://miteo-a-realtimecommunication.onrender.com",
+  origin: ["https://miteo-a-realtimecommunication.onrender.com",`http://localhost:${app.get("port")}`],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
