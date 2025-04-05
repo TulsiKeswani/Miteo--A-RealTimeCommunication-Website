@@ -6,7 +6,7 @@ let timeOnline = {};
 export const connectToSocket = (server) => {
   const io = new Server(server,{
     cors : {
-        origin : "https://miteo-a-realtimecommunication.onrender.com/",
+        origin : "https://miteo-a-realtimecommunication.onrender.com",
         methods : ["GET","POST"],
         allowHeaders : ["*"],
         credentials : true
