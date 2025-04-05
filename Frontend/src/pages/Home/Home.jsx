@@ -8,7 +8,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { AuthContext } from "../../contexts/AuthContext";
 
-import server from "../environment.js";
+import server from "../../environment.js";
 function Home() {
   const [login, setLogin] = useState();
   const navigate = useNavigate();

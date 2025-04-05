@@ -15,7 +15,7 @@ import MessageIcon from "@mui/icons-material/Message";
 import SendIcon from "@mui/icons-material/Send";
 import Navbar from "../LandingPage/Navbar.jsx";
 import "./scroll.js";
-import server from "../environment.js";
+import server from "../../environment.js";
 
 const server_url =server;
 
