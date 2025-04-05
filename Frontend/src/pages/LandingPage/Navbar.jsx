@@ -5,14 +5,14 @@ import "./Navbar.css"
 import { useNavigate } from "react-router-dom";
 import  { useState,useEffect } from 'react';
 import axios from "axios";
-const PORT = import.meta.env.PORT; 
+import server from "../../environment.js";
 function Navbar() {
   const[login,setLogin] = useState();
   useEffect(() => {
     const checkAuth = async () => {
       try {
         let result = await axios.get(
-          `http://localhost:${PORT}/api/v1/miteo/user/getCookie`,
+          `${server}/api/v1/miteo/user/getCookie`,
           { withCredentials: true }
         );
         if (!result.data.success) {
