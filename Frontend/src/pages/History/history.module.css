@@ -1,0 +1,41 @@
+.history_container{
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 1rem;
+     gap: 10px;
+}
+
+.history_container .history{
+    width: 50%;
+    padding: 1rem;
+    background-color: rgba(54, 54, 252, 0.3);
+    border-radius: 10px;
+    border-bottom: 1px solid rgb(0, 0, 0,0.4);
+    box-shadow: 3px 2px 10px rgb(0, 0, 0,0.3);
+
+}
+
+.history_container .history p b{
+    color: rgb(243, 93, 39);
+}
+.history_container .history p{
+    margin-bottom: 10px;
+}
+
+.history_back_btn{
+    all: unset;
+    padding-inline: 20px;
+    padding-block: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    background-color: rgb(49, 47, 47);
+    color: aliceblue;
+    border-radius: 40px;
+    cursor: pointer;
+}
+

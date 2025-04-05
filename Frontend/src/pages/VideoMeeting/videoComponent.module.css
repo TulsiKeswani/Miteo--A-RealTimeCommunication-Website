@@ -1,0 +1,180 @@
+.meetVideoContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    background-color: #1C1C1C;
+    padding: 20px;
+    /* overflow: hidden; */
+  }
+  
+  
+  .all_videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto columns */
+    gap: 10px; /* Videos ke beech gap */
+    justify-content: center;
+    margin-bottom: 30px; /* Chat section adjust karne ke liye */
+    max-height: 90vh;
+    flex: 1;
+  }
+
+ 
+  .all_videos video {
+    width:100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .button_container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #1C1C1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .button_container svg{
+    font-size: 2rem;
+    color: aliceblue;
+    
+  }
+  
+
+  .loby_page{
+    display: flex;
+    height: 85vh;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .loby_page .loby_video{
+     border-radius: 20px;
+     box-shadow: 3px 3px 10px rgb(0, 0, 0,0.3);
+     width: 50vw;
+     height: 60vh;
+  }
+  .loby_page .loby_video video{
+    width: inherit;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .loby_page .loby_rightHalf{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .loby_page .loby_rightHalf .loby_rightHalf_join{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .loby_page .loby_rightHalf h2{
+    color:rgb(243, 93, 39);
+  }
+
+  .loby_page .loby_rightHalf .lobyButton{
+        padding-block: 10px;
+        border-radius: 40px;
+        border: none;
+        background-color: #1976D2;
+        color: aliceblue;
+        font-weight:bold;
+        font-size: 1.2rem;
+        cursor: pointer;
+  }
+  @media (max-width:710px) {
+      .loby_page{
+        flex-direction: column;
+      }
+      .loby_page .loby_video{
+        width: 90%;
+        height: 50vh;
+      }
+      .loby_page .loby_video video{
+        width: 100%;
+      }
+  }
+
+  .chat_container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 90vh;
+    background: rgb(255, 255, 255,0.1);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: -3px -2px 10px rgb(0, 0, 0,0.1);
+  }
+  
+  .chat_container .chat_input{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+    border-top: 1px solid rgb(255, 255, 255,0.4);
+    color: aliceblue;
+  }
+  .chat_container .chat_input:hover{
+      border: 1px solid rgb(240, 248, 255,0.5);
+      border-radius: 10px;
+  } 
+   .chat_input .chat_input_text{
+    all: unset;
+    width : 80%;
+  
+    height: 70px;
+  }
+  .chat_display::-webkit-scrollbar{
+    background-color: #333333;
+    
+  }
+  
+  .chat_container .sendIcon{
+        color:blue;
+        cursor: pointer;
+        margin-left: 3px;
+  }
+  .chat_container .sendIcon_rap{
+    background-color: rgb(0, 0, 0,0.4);
+    padding: 8px;
+    border-radius: 50%;
+    }
+  .chat_display{
+    margin-left: 1rem;
+    height: 70vh;
+    overflow-y:scroll;
+  }
+ 
+  .chat_display div{
+    background-color: rgb(0, 0, 0,0.1);
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  .chat_display div span{
+    color :#f5f5f5;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+  .chat_display div p{
+    color: rgb(167, 167, 215);
+  }
+  .append{
+    width: calc(100vh - 368px);
+  }

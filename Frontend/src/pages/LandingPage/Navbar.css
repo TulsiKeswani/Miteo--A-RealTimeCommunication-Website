@@ -1,0 +1,70 @@
+
+/* navbar styling */
+.landingPageNavbar{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid rgb(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.landingPageNavbar .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.landingPageNavbar .nav_items{
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    font-size: 1.1rem;
+    color: rgb(86, 81, 81);
+    transition: 4ms ease-in;
+    cursor: pointer;
+}
+.landingPageNavbar .nav_items .links:hover{
+    color: black;
+}
+.landingPageNavbar .nav_items button{
+    background: white;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    background-color: rgb(243, 93, 39);
+    border: none;
+    border-radius: 3px;
+    color: bisque;
+}   
+.landingPageNavbar .nav_items #basic-button{
+    all: unset;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .landingPageNavbar{
+        padding-inline: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .landingPageNavbar .nav_items .links{
+      display: none;
+    }
+
+    .landingPageNavbar .nav_items #basic-button{
+        display: inline-block;
+        margin-right: 1.7rem;
+        font-size: 1.5rem;
+        opacity: 0.6;
+    }
+    .landingPageNavbar .nav_items #basic-button:hover{
+        color: black;
+        opacity: 0.8;
+    }
+
+}

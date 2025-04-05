@@ -1,0 +1,110 @@
+
+/* navbar styling */
+.HomePageNavbar{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid rgb(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.HomePageNavbar .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.logo img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.logo h2{
+    font-size: 2.5rem;
+}
+.HomePageNavbar .nav_items{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    color: rgb(86, 81, 81);
+    transition: 4ms ease-in;
+    cursor: pointer;
+}
+.HomePageNavbar .nav_items .links:hover{
+    color: black;
+}
+.HomePageNavbar .nav_items button{
+    background: white;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    background-color: rgb(243, 93, 39);
+    border: none;
+    border-radius: 3px;
+    color: bisque;
+    cursor: pointer;
+}  
+
+
+@media (max-width:640px) {
+    .HomePageNavbar{
+        padding-inline: 1rem;
+    }
+    .logo h2{
+        font-size: 2rem;
+    }
+}   
+
+@media (max-width:400px) {
+    .HomePageNavbar .nav_items button{
+        padding-inline: 1rem;
+    }
+    .HomePageNavbar .nav_items{
+        gap: 1rem;
+    }
+
+    .logo img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .logo h2{
+        font-size: 1.5rem;
+    }
+}
+
+.meet_container{
+    display: flex;
+    height: 90vh;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: 1rem ;
+}
+
+.meeting_logo img{
+    height: auto;
+    width: 40vw;
+    min-height: 50vh;
+    min-width: 200px;
+}
+
+.meet_container .genrate_meeting{
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
+}
+.genrate_meeting h2{
+    font-size: 2rem;
+    color: rgb(243, 93, 39);
+}
+@media (max-width:577px) {
+    .meet_container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        margin: auto;
+    }
+    .genrate_meeting h2{
+        font-size: 1.2rem;
+    }
+}

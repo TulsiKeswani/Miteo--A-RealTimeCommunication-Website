@@ -1,0 +1,182 @@
+.landingPageContainer{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* content styling */
+
+.content .rapper{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 90vw;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.content div .heading{
+    font-size: 5.2vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: rgb(2, 2, 103);
+}
+.content .rapper .about_web{
+   width: 50vw;
+   margin-top: 10px;
+}
+
+.content .rapper .about_web p{
+    color : rgb(66, 61, 61);
+    font-size: small;
+}
+
+.content .rapper .about_web button{
+    margin-top: 17px;
+    padding: 13px 30px;
+    background-color: rgb(243, 93, 39);
+    border-radius: 7px;
+    border: none;
+    color: bisque;
+    cursor: pointer;
+}
+
+
+/* image manage */
+
+.landingPageContainer .image{
+        margin: auto;
+        margin-top: 50px;
+}
+
+
+/* content 2 */
+
+.content2 .rapper2{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50vw;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+.content2 div .heading2{
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: rgb(2, 2, 103);
+}
+.content2 .rapper2 .about_web2{
+   width: 70vw;
+   margin-top: 10px;
+}
+
+.content2 .rapper2 .about_web2 p{
+    color : rgb(66, 61, 61);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 785px) {
+    .content .rapper{
+        width: 80vw;
+    }
+    .content .rapper .about_web{
+        width: 80vw;
+    }
+    .content2 .rapper2{
+        width: 80vw;
+    }
+}  
+
+@media (max-width: 350px) {
+    .content2 .rapper2 .about_web2{
+        width: 90vw;
+     }
+     .content2 div .heading2{
+        font-size: 1.5rem;
+     }
+     .content div .heading{
+        font-size: 1.2rem;
+     }
+}
+
+/* Features css */
+
+.landingPageContainer .Features {
+    display: flex;
+    margin-top: 70px;
+    width: 80vw;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.landingPageContainer .Features div{
+    text-align:center;
+    background-color: rgb(240, 255, 255,0.7);
+    /* background-color: rgb(255, 150, 110,0.3); */
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    padding-block: 10px;
+    padding-inline: 0.5px;
+}
+
+.landingPageContainer .Features div .Feature{
+        font-weight:800;
+        margin-block: 10px;
+}
+
+
+.landingPageContainer .Features div .description{
+    color : rgb(66, 61, 61);
+    width: 80%;
+    margin: auto;
+    font-size: 0.9rem;
+}
+
+
+.landingPageContainer .Features div .icon{
+    font-size: 2rem;
+    
+} 
+
+@media (max-width: 720px) {
+    .landingPageContainer .Features {
+        flex-direction: column;
+        gap : 20px;
+    }
+
+    .landingPageContainer .Features div{
+        width: 50vw;
+        margin: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .landingPageContainer .Features div{
+        width: 80vw;
+        margin: auto;
+    }
+}
+
+.landingPageContainer .Features div:hover{
+        transition: transform 0.3s ease-in-out; 
+        transform: translate(-3px, -5px); /* Moves the div smoothly */
+        /* box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.2); */
+        /* filter: drop-shadow(0px 10px 10px rgba(45, 140, 255, 0.2)); Pinkish gradient effect */
+        box-shadow: 0 0 15px rgb(243, 93, 39,0.5), 0 0 30px rgba(206, 145, 53, 0.5);
+}
+
+
+
+
