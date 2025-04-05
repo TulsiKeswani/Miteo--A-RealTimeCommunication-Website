@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import axios from "axios";
-
+import server from "../environment.js";
 import { useNavigate } from "react-router-dom";
 
 const withAuth = (WrappedComponent) => {
@@ -11,7 +11,7 @@ const withAuth = (WrappedComponent) => {
         useEffect(() => {
             const checkAuth = async () => {
                 try {
-                    let result = await axios.get("http://localhost:8000/api/v1/miteo/user/getCookie", { withCredentials: true });
+                    let result = await axios.get(`${server}/api/v1/miteo/user/getCookie`, { withCredentials: true });
                     if (!result.data.success) {
                         navigate("/auth");
                     }

@@ -10,6 +10,7 @@ import History from "./pages/History/history";
 import "./App.css";
 
 import axios from "axios";
+import server from "../environment.js";
 
 function App() {
   
@@ -18,7 +19,7 @@ function App() {
     const checkAuth = async () => {
       try {
         let result = await axios.get(
-          "http://localhost:8000/api/v1/miteo/user/getCookie",
+          `${server}/api/v1/miteo/user/getCookie`,
           { withCredentials: true }
         );
         if (!result.data.success) {

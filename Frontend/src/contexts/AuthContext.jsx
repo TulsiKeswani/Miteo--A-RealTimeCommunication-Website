@@ -3,8 +3,10 @@ import React, { useState, useContext, createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import httpStatus from "http-status";
 export const AuthContext = createContext({});
+
+import server from "../environment.js";
 const client = axios.create({
-  baseURL: "http://localhost:8000/api/v1/miteo/user",
+  baseURL: `${server}/api/v1/miteo/user`,
 });
 
 export const AuthProvider = ({ children }) => {

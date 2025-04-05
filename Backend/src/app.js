@@ -26,8 +26,6 @@ main()
   });
 
 async function main() {
-  console.log(process.env.DB_URL);
-
   await mongoose.connect(
     process.env.DB_URL
   );

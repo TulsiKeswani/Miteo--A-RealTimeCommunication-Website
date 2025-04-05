@@ -7,7 +7,8 @@ import axios from "axios";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { AuthContext } from "../../contexts/AuthContext";
-
+import server from "../environment.js";
+import server from "../environment.js";
 function Home() {
   const [login, setLogin] = useState();
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ function Home() {
   let handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:8000/api/v1/miteo/user/logout",
+        `${server}/api/v1/miteo/user/logout`,
         {},
         { withCredentials: true }
       );
@@ -37,7 +38,7 @@ function Home() {
     const checkAuth = async () => {
       try {
         let result = await axios.get(
-          "http://localhost:8000/api/v1/miteo/user/getCookie",
+          `${server}/api/v1/miteo/user/getCookie`,
           { withCredentials: true }
         );
         if (!result.data.success) {
