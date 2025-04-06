@@ -34,14 +34,24 @@ const app = express();
 app.set("port", process.env.PORT || 8000);
 app.use(cookieParser());
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://miteo-a-realtimecommunication.onrender.com"
+];
+
 app.use(
   cors({
-    origin: "https://miteo-a-realtimecommunication.onrender.com",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+app.options("*", cors());
 const server = createServer(app);
 const io = connectToSocket(server);
 
