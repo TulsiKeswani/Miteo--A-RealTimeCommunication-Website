@@ -32,6 +32,7 @@ function Authentication() {
       if (formState === 0) {
         console.log(password);
         let result = await handleLogin(username,password);
+        console.log(result);
       }
       if (formState === 1) {
 

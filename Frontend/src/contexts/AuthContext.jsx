@@ -32,6 +32,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const handleLogin = async (username, password) => {
+    console.log("Render In HandleLogin");
     try {
       let request = await client.post(
         "/login",

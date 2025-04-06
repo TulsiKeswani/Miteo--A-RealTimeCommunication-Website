@@ -59,10 +59,11 @@ const login = async (req,res) => {
 
         if(await argon2.verify(user.password, password)){
             const token = generateToken(user);
+            console.log("Genrated token => ", token);
             res.cookie("token", token, {
                 httpOnly: true,
-                secure: false, // Use HTTPS in production
-                sameSite: "Strict",
+                secure: true, // Use HTTPS in production
+                sameSite: "None",
                 maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
                 
             });
