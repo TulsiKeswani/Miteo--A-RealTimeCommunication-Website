@@ -31,12 +31,12 @@ async function main() {
   );
 }
 const app = express();
-
+app.set("port", process.env.PORT || 8000);
 app.use(cookieParser());
 
 app.use(
   cors({
-  origin: "https://miteo-a-realtimecommunication.onrender.com",  //`http://localhost:${app.get("port")}`
+  origin: "https://miteo-a-realtimecommunication.onrender.com",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -44,7 +44,7 @@ app.use(
 );
 const server = createServer(app);
 const io = connectToSocket(server);
-app.set("port", process.env.PORT || 8000);
+
 
 app.use(express.json({ limit: "40kb" }));
 app.use(express.urlencoded({ limit: "40kb", extended: true }));

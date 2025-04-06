@@ -1,8 +1,8 @@
 import dotenv from "dotenv";
 
 if(process.env.NODE_ENV != "production"){
-  dotenv.config();
-  console.log("NODE_ENV:", dotenv.config());
+  let result = dotenv.config();
+  
 }
 
 import { User } from "../models/user_model.js";
@@ -14,10 +14,9 @@ import jwt from "jsonwebtoken";
 const register = async (req,res) => {
     const {name , username, password} = req.body;
     try {
-        console.log(username);
+       
         const user = await User.findOne({username});
         if(user){
-            console.log(user);
            return res.status(httpStatus.FOUND).json({message : "User already register"})
         } 
         const hashpassword = await argon2.hash(password);
@@ -38,15 +37,16 @@ const register = async (req,res) => {
 // tokem generation function -->
 
 
-const key = process.env.SECRET_KEY;
-console.log(key);
-function generateToken(user) {
-  const payload = { id : user._id,username : user.username};
 
-  return jwt.sign(payload, key , { expiresIn: "7d" }); // 1 week validity
+
+function generateToken(user) {
+    const key = process.env.SECRET_KEY;
+    const payload = { id : user._id,username : user.username};
+    return jwt.sign(payload, key , { expiresIn: "7d" }); // 1 week validity
 }
 
 const login = async (req,res) => {
+    
     const {username,password} = req.body;
     if(!username || !password){
         return res.status(httpStatus.BAD_REQUEST).json({message : "username or password something not provide"});
@@ -104,7 +104,7 @@ const getAllActivities = async(req,res) => {
             return res.status(httpStatus.UNAUTHORIZED).json({message : "Unautherized"})
         }
 
-        const decoded = jwt.verify(token, SECRET_KEY);
+        const decoded = jwt.verify(token, process.env.SECRET_KEY);
         const userId = decoded.id;
 
         const user = await User.findById(userId);
@@ -124,7 +124,7 @@ const getAllActivities = async(req,res) => {
 const addToActivites = async(req,res) => {
     const token = req.cookies.token;
     console.log(token);
-    const decoded = jwt.verify(token, SECRET_KEY);
+    const decoded = jwt.verify(token, key);
     const userId = decoded.id;
 
     const {meeting_code} = req.body;
