@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import Authentication from "./pages/Authentication/Authentication.jsx";
 import Home from "./pages/Home/Home.jsx";
 import VideoMeeting from "./pages/VideoMeeting/VideoMeeting.jsx";
+import NotFound from "./pages/NotFound/NotFound.jsx"
 import { AuthProvider } from "./contexts/AuthContext.jsx";
 
 import History from "./pages/History/history";
@@ -46,6 +47,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/history" element={<History />} />
             <Route path="/:url" element={<VideoMeeting />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
       </BrowserRouter>
