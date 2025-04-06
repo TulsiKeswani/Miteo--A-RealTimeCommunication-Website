@@ -13,8 +13,10 @@ function Navbar() {
       try {
         let result = await axios.get(
           `${server}/api/v1/miteo/user/getCookie`,
+         
           { withCredentials: true }
         );
+        {console.log(result);}
         if (!result.data.success) {
           setLogin(false);
         } else {

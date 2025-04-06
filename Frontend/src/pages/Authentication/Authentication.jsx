@@ -24,6 +24,9 @@ function Authentication() {
 
   const { handleRegister, handleLogin } = React.useContext(AuthContext);
   let handleAuth = async (e) => {
+    console.log("In handle Auth");
+    console.log(username)
+    console.log(password)
     e.preventDefault();
     try {
       if (formState === 0) {
@@ -107,12 +110,15 @@ function Authentication() {
                     name="FullName"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    
                   />{" "}
                   <br />
                 </>
               ) : (
                 <></>
               )}
+                
+
 
               <label htmlFor="username" className="labels">
                 Username
