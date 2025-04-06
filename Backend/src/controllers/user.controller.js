@@ -91,7 +91,7 @@ const logout = (req, res) => {
     res.cookie("token", "", {
         httpOnly: true,
         secure: true,
-        sameSite: "strict",
+        sameSite: "None",
         expires: new Date(0), // Set cookie expiry to past time
     });
     res.json({ success: true, message: "Logged out successfully" });
