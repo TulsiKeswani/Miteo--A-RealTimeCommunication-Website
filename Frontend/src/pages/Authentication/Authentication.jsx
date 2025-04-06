@@ -30,7 +30,7 @@ function Authentication() {
     e.preventDefault();
     try {
       if (formState === 0) {
-        console.log(password);
+        console.log("Form password" + password);
         let result = await handleLogin(username,password);
         console.log(result);
       }
