@@ -40,7 +40,7 @@ function History() {
           );
         })
       ) : (
-        <p>Hello world</p>
+        <p>No meetings yet — your activity will show up here once you start collaborating! </p>
       )}
     </div>
     </div>
