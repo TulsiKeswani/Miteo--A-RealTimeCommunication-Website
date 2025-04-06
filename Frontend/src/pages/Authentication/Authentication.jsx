@@ -30,10 +30,11 @@ function Authentication() {
     e.preventDefault();
     try {
       if (formState === 0) {
-
+        console.log(password);
         let result = await handleLogin(username,password);
       }
       if (formState === 1) {
+
         let result = await handleRegister(name, username, password);
         console.log(result);
         setMessage(result);

@@ -9,6 +9,7 @@ import server from "../../environment.js";
 function Navbar() {
   const[login,setLogin] = useState();
   useEffect(() => {
+    console.log(server);
     const checkAuth = async () => {
       try {
         let result = await axios.get(
