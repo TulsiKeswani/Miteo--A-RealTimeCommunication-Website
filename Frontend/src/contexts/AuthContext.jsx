@@ -52,6 +52,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const addToUserHistory = async(meetingCode) => {
+    console.log("In add To HIstory");
       try {
           let result = await client.post("/add_to_activity",{
             meeting_code : meetingCode

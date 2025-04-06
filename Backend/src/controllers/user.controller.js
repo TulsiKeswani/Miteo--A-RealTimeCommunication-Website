@@ -125,7 +125,7 @@ const getAllActivities = async(req,res) => {
 const addToActivites = async(req,res) => {
     const token = req.cookies.token;
     console.log(token);
-    const decoded = jwt.verify(token, key);
+    const decoded = jwt.verify(token, process.env.SECRET_KEY);
     const userId = decoded.id;
 
     const {meeting_code} = req.body;
