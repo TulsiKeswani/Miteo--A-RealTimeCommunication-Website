@@ -2,7 +2,7 @@ import React from 'react';
 
 function NotFound() {
     return (
-        <div> Not Found</div>
+        <img src="/assets/NotFound2.webp" alt="" />
      );
 }
 
