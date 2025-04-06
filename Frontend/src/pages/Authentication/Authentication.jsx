@@ -61,7 +61,7 @@ function Authentication() {
         </div>
 
         <div className="form">
-          <form >
+          <form onSubmit={handleAuth}>
         
             <div className="for_logo">
               <img
@@ -160,7 +160,7 @@ function Authentication() {
             </div>
 
             <div className="bottom_text">
-              <Button variant="contained" type="submit" onClick={handleAuth}>Submit</Button>
+              <Button variant="contained" type="submit">Submit</Button>
               <span style={{ cursor: "pointer" }}>Forgot your Password?</span>
             </div>
           </form>
