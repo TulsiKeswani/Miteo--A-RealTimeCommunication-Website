@@ -1,4 +1,4 @@
-let isProd = false;
+let isProd = true;
 
 const server = isProd ? 
 'https://miteo-a-realtimecommunication-website.onrender.com' :
