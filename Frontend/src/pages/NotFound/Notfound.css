@@ -1,0 +1,17 @@
+.NotFoundContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.NotFoundContainer img{
+    height: 30vh;
+    width: 30vw;
+}
+
+.NotFoundContainer h2{
+    color: #121212;
+}
