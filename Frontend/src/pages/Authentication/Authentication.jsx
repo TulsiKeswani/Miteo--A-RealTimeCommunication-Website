@@ -51,6 +51,7 @@ function Authentication() {
       setUsername("");
       setPassword("");
       setName("");
+      setMessage("");
     }
   };
   return (
