@@ -79,8 +79,9 @@ function Authentication() {
                 <Button
                   variant={formState === 0 ? "contained" : ""}
                   onClick={() => {
-                    setFormState(0);
                     setError("");
+                    setFormState(0);
+                   
                   }}
                 >
                   Sing In
@@ -88,8 +89,9 @@ function Authentication() {
                 <Button
                   variant={formState === 1 ? "contained" : ""}
                   onClick={() => {
-                    setFormState(1);
                     setError("");
+                    setFormState(1);
+                    
                   }}
                 >
                   Sign up
