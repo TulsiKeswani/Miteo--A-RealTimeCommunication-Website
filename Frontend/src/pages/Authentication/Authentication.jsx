@@ -51,7 +51,6 @@ function Authentication() {
       setUsername("");
       setPassword("");
       setName("");
-      setMessage("");
     }
   };
   return (
@@ -154,13 +153,6 @@ function Authentication() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <p
-                style={{
-                  color: "red",
-                }}
-              >
-                {error}
-              </p>
              
             </div>
 
