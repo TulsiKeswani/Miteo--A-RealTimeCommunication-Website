@@ -40,7 +40,7 @@ function ScrollDialog() {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="scroll-dialog-title">Terms & Conditions</DialogTitle>
         <DialogContent dividers={scroll === "paper"}>
           <DialogContentText
             id="scroll-dialog-description"
@@ -116,7 +116,7 @@ function ScrollDialog2() {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="scroll-dialog-title">Privacy Policy</DialogTitle>
         <DialogContent dividers={scroll === "paper"}>
           <DialogContentText
             id="scroll-dialog-description"
