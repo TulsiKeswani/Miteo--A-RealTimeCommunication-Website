@@ -633,11 +633,12 @@ export default function VideoMeeting() {
                 )
               ) : null}
             </IconButton>
-
+            
+            
             <Badge
               badgeContent={newMessages}
               color="primary"
-              onClick={() => setModal(!showModal)}
+              onClick={() => {setModal(!showModal);setNewMessages(0)} }
               style={{ cursor: "pointer" }}
               className={styles.badge} 
             >

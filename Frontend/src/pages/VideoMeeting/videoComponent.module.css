@@ -16,7 +16,6 @@
     justify-content: center;
     margin-bottom: 30px; /* Chat section adjust karne ke liye */
     max-height: 90vh;
-    max-width: 60vw;
     flex: 1;
   }
 
