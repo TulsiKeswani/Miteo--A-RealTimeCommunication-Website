@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import { AuthContext } from "../../contexts/AuthContext";
 
 import server from "../../environment.js";
+import Navbar from "../LandingPage/Navbar.jsx"
 function Home() {
   const [login, setLogin] = useState();
   const navigate = useNavigate();
@@ -19,19 +20,6 @@ function Home() {
     {login === true ? await addToUserHistory(meetingCode) : navigate(`/${meetingCode}`)}
     
     navigate(`/${meetingCode}`);
-  };
-
-  let handleLogout = async () => {
-    try {
-      await axios.post(
-        `${server}/api/v1/miteo/user/logout`,
-        {},
-        { withCredentials: true }
-      );
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   useEffect(() => {
@@ -56,46 +44,7 @@ function Home() {
 
   return (
     <div>
-      <nav className="HomePageNavbar">
-        <div className="logo">
-          <img src={videoCallIcon} />
-          <h2>Miteo</h2>
-        </div>
-        {login === true ? (
-          <div className="nav_items">
-            <p
-              className="links"
-              onClick={() => {
-                navigate("/history");
-              }}
-            >
-              <b>History</b>
-            </p>
-            <button className="links" onClick={handleLogout}>
-              Logout
-            </button>
-          </div>
-        ) : (
-          <div className="nav_items">
-            <p
-              className="links"
-              onClick={() => {
-                navigate("/auth?type=login");
-              }}
-            >
-              <b>Login</b>
-            </p>
-            <button
-              className="links"
-              onClick={() => {
-                navigate("/auth?type=signup");
-              }}
-            >
-              Signup
-            </button>
-          </div>
-        )}
-      </nav>
+      <Navbar></Navbar>
 
       <div className="meet_container">
         <div className="genrate_meeting">

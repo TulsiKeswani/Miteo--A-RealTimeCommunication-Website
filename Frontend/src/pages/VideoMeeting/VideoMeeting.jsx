@@ -525,7 +525,7 @@ export default function VideoMeeting() {
                 <TextField
                   id="outlined-basic"
                   className={styles.outlined_basic}
-                  label="Enter Username"
+                  label="Enter Username..."
                   variant="outlined"
                   size="small"
                   value={username}
