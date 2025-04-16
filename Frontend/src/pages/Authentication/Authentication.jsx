@@ -82,6 +82,7 @@ function Authentication() {
                   variant={formState === 0 ? "contained" : ""}
                   onClick={() => {
                     setFormState(0);
+                    setMessage("");
                   }}
                 >
                   Sing In
@@ -90,6 +91,7 @@ function Authentication() {
                   variant={formState === 1 ? "contained" : ""}
                   onClick={() => {
                     setFormState(1);
+                    setMessage("");
                   }}
                 >
                   Sign up
