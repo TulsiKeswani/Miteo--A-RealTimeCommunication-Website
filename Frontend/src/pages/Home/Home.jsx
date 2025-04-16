@@ -52,6 +52,7 @@ function Home() {
           <p>
             Bringing people closer – seamless connections, endless conversations
           </p>
+          <p></p>
           <div style={{ display: "flex" }}>
             <TextField
               id="outlined-basic"
