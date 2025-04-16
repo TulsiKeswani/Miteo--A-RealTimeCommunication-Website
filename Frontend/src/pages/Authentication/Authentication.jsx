@@ -24,15 +24,13 @@ function Authentication() {
 
   const { handleRegister, handleLogin } = React.useContext(AuthContext);
   let handleAuth = async (e) => {
-    console.log("In handle Auth");
-    console.log(username)
-    console.log(password)
+    
+    
     e.preventDefault();
     try {
       if (formState === 0) {
-        console.log("Form password" + password);
         let result = await handleLogin(username,password);
-        console.log(result);
+       
       }
       if (formState === 1) {
 
@@ -82,7 +80,7 @@ function Authentication() {
                   variant={formState === 0 ? "contained" : ""}
                   onClick={() => {
                     setFormState(0);
-                    setMessage("");
+                    setError("");
                   }}
                 >
                   Sing In
@@ -91,7 +89,7 @@ function Authentication() {
                   variant={formState === 1 ? "contained" : ""}
                   onClick={() => {
                     setFormState(1);
-                    setMessage("");
+                    setError("");
                   }}
                 >
                   Sign up
