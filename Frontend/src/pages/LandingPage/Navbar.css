@@ -44,7 +44,9 @@
     all: unset;
     display: none;
 }
-
+.landingPageNavbar .nav_items .dropdown{
+    display: none;
+}
 @media (max-width: 900px) {
     .landingPageNavbar{
         padding-inline: 10px;
@@ -55,7 +57,9 @@
     .landingPageNavbar .nav_items .links{
       display: none;
     }
-
+    .landingPageNavbar .nav_items .dropdown{
+        display: inline-block;
+    }
     .landingPageNavbar .nav_items #basic-button{
         display: inline-block;
         margin-right: 1.7rem;
