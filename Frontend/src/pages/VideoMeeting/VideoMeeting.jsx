@@ -573,7 +573,7 @@ export default function VideoMeeting() {
                   placeholder = "Enter Your Message..."
                   inputRef={messageRef}
                 ></input>
-                {message ? (
+                {messageRef ? (
                   <div className={styles.sendIcon_rap}>
                     <SendIcon
                       className={styles.sendIcon}
