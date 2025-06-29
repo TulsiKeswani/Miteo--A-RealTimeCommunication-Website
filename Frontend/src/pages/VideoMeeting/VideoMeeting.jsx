@@ -56,7 +56,7 @@ export default function VideoMeeting() {
   let [username, setUsername] = useState("");
 
   const videoRef = useRef([]);
-
+  const usernameRef = useRef("");
   let [videos, setVideos] = useState([]);
 
   // TODO
@@ -487,6 +487,7 @@ export default function VideoMeeting() {
 
   let connect = () => {
     setAskForUsername(false);
+    setUsername(usernameRef.current.value);
     getMedia();
   };
 
@@ -528,8 +529,7 @@ export default function VideoMeeting() {
                   label="Enter Username..."
                   variant="outlined"
                   size="small"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  inputRef = {usernameRef}
                 />
               <Button variant="contained" onClick={connect}  class={styles.lobyButton}>
                 Join
