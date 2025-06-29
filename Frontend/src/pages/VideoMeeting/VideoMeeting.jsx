@@ -57,6 +57,7 @@ export default function VideoMeeting() {
 
   const videoRef = useRef([]);
   const usernameRef = useRef("");
+  const messageRef = useRef("");
   let [videos, setVideos] = useState([]);
 
   // TODO
@@ -478,6 +479,7 @@ export default function VideoMeeting() {
   };
 
   let sendMessage = () => {
+    setMessage(messageRef.current.value);
     console.log(socketRef.current);
     socketRef.current.emit("chat-message", message, username);
     setMessage("");
@@ -569,8 +571,7 @@ export default function VideoMeeting() {
                 <input
                   className={styles.chat_input_text}
                   placeholder = "Enter Your Message..."
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  inputRef={messageRef}
                 ></input>
                 {message ? (
                   <div className={styles.sendIcon_rap}>
