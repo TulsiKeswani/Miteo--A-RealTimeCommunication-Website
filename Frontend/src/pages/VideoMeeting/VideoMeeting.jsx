@@ -481,10 +481,12 @@ export default function VideoMeeting() {
   let sendMessage = () => {
       const text = messageRef.current?.value.trim();   // null‑safe read
       if (!text) return; 
-    setMessage(messageRef.current.value);
-    socketRef.current.emit("chat-message", message, username);
-    messageRef.current.value = "";
-    setMessage("");
+
+      console.log(text);
+      setMessage(messageRef.current.value);
+      socketRef.current.emit("chat-message", message, username);
+      messageRef.current.value = "";
+      setMessage("");
     
     // this.setState({ message: "", sender: username })
   };
