@@ -483,10 +483,8 @@ export default function VideoMeeting() {
       if (!text) return; 
 
       console.log(text);
-      setMessage(messageRef.current.value);
-      socketRef.current.emit("chat-message", message, username);
+      socketRef.current.emit("chat-message", text, username);
       messageRef.current.value = "";
-      setMessage("");
     
     // this.setState({ message: "", sender: username })
   };
@@ -583,7 +581,6 @@ export default function VideoMeeting() {
                       onClick={sendMessage}
                     />
                   </div>
-                
               </div>
             </div>
           ) : (
