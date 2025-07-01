@@ -505,7 +505,11 @@ export default function VideoMeeting() {
     } catch (error) {
       console.log("Some Error");
     }
+     Object.values(connections.current).forEach(pc => pc.close());
+    connections.current = {};
 
+  // 👇 emit the SAME name that other clients listen to
+    socketRef.current.emit("user-left", socketRef.current.id);
     routeTo("/home");
   };
   let routeTo = useNavigate();
