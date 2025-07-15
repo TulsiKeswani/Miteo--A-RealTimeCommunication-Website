@@ -23,6 +23,8 @@ export const AuthProvider = ({ children }) => {
         password: password,
       });
 
+      console.log(request);
+
       if (request.status === httpStatus.CREATED) {
         return request.data.message;
       }

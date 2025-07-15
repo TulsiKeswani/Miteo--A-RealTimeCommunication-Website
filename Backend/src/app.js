@@ -2,16 +2,14 @@ import dotenv from "dotenv";
 
 if(process.env.NODE_ENV != "production"){
   dotenv.config();
-  console.log("NODE_ENV:", dotenv.config());
 }
-console.log("NODE_ENV:", process.env.NODE_ENV);
 
 import express from "express";
 
 import { createServer } from "node:http";
 import { Server } from "socket.io";
 import { mongoose } from "mongoose";
-// import cors from "cors";
+import cors from "cors";
 import { connectToSocket } from "./controllers/socketManager.js";
 import userRoutes from "./routes/userRoutes.js";
 import cookieParser from "cookie-parser";
